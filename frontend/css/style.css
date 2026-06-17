@@ -1,0 +1,29 @@
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+}
+.container2{
+    max-width: 500px;
+    max-height: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: rgb(165, 31, 31);
+    border-radius: 30px;
+}
+.ust-kısım{
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+.todo-list{
+background-color: blue;
+max-width: 75px;
+border-radius: 10px;
+}
+.profil{
+    background-color: blueviolet;
+    max-width: 136px;
+    border-radius: 10px;
+}
