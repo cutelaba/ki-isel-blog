@@ -5,7 +5,41 @@ body {
     background-position: center;
     min-height: 100vh;
 }
+body.program{background-color: rgb(254, 0, 144);}
 #YT-Link img{
     width: 240px;
     height: auto;
+}
+/* 1. KURAL: Tarayıcının kafasına göre esnemesini engelle */
+table {
+    width: 100%;             /* Tablo ekranı komple kaplasın */
+    table-layout: fixed;     /* İŞTE SİHİRLİ ÖZELLİK! Sütun genişliklerini sabitler, yazıya göre esnetmez. */
+    border-collapse: collapse; /* Çift çizgileri yok edip tek çizgi yapar, daha modern durur. */
+}
+
+/* 2. KURAL: Sütun genişliklerini yüzde olarak dağıt */
+/* Saat sütununa %16 verdik, kalan %84'ü 7 güne eşit bölmek için her güne %12 düşüyor */
+
+.saat-sutunu {
+    width: 16%;
+    background-color: rgb(110, 64, 64);
+}
+
+.pazartesi-sutunu, 
+.sali-sutunu, 
+.carsamba-sutunu, 
+.persembe-sutunu, 
+.cuma-sutunu, 
+.cumartesi-sutunu, 
+.pazar-sutunu {
+    width: 12%; /* 7 gün x 12 = %84. Saatle toplayınca tam %100! */
+}
+
+/* 3. KURAL: Kutuların içindeki yazıların taşmasını engelle ve hizala */
+table td, table th {
+    height: 70px;            /* Bütün normal kutuların yüksekliği eşit olsun */
+    text-align: center;      /* Yazılar yatayda ortalansın */
+    vertical-align: middle;  /* Yazılar dikeyde tam ortada dursun */
+    word-wrap: break-word;   /* Eğer ders ismi çok uzunsa kutuyu genişletmesin, alt satıra geçsin */
+    padding: 10px;           /* Yazı kutunun duvarlarına yapışmasın (Senin gels padding) */
 }
