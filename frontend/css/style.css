@@ -5,3 +5,7 @@ body {
     background-position: center;
     min-height: 100vh;
 }
+#YT-Link img{
+    width: 240px;
+    height: auto;
+}
