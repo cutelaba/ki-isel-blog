@@ -37,9 +37,54 @@ table {
 
 /* 3. KURAL: Kutuların içindeki yazıların taşmasını engelle ve hizala */
 table td, table th {
-    height: 70px;            /* Bütün normal kutuların yüksekliği eşit olsun */
+    height: 30px;            /* Bütün normal kutuların yüksekliği eşit olsun */
     text-align: center;      /* Yazılar yatayda ortalansın */
     vertical-align: middle;  /* Yazılar dikeyde tam ortada dursun */
     word-wrap: break-word;   /* Eğer ders ismi çok uzunsa kutuyu genişletmesin, alt satıra geçsin */
     padding: 10px;           /* Yazı kutunun duvarlarına yapışmasın (Senin gels padding) */
+}
+.pazartesi-sutunu{
+    background-color: rgb(219, 142, 49);
+}
+.sali-sutunu{
+    background-color: blueviolet;
+}
+/* Bütün tik kutularını yakala ve baştan yarat */
+.ders-tik {
+    -webkit-appearance: none; /* Safari için orijinal şekli sil */
+    appearance: none;         /* Chrome, Edge ve Firefox için orijinal şekli sil */
+    
+    width: 24px;              /* Kutunun genişliği (İstediğin gibi büyütebilirsin) */
+    height: 14px;             /* Kutunun yüksekliği */
+    
+    border: 2px solid #37ff00;   /* Kutunun dış çerçeve çizgisi ve rengi */
+    border-radius: 6px;       /* İşte o istediğin hafif yuvarlak köşeler! Tam yuvarlak için 50% yapabilirsin */
+    
+    outline: none;
+    cursor: pointer;          /* Fareyle üzerine gelince el işareti çıksın */
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 5px;          /* Ders yazısıyla arasına biraz esneklik boşluğu */
+    
+    transition: all 0.2s ease; /* Renk değiştirirken yumuşak geçiş yapsın */
+    background-color: #fff;   /* İç arka plan rengi ilk başta beyaz olsun */
+}
+
+/* 🎯 KUTUYA TIKLANDIĞI ZAMAN (CHECKED DURUMU) */
+.ders-tik:checked {
+    background-color: #00d107; /* Tik atılınca kutunun içi tatlı bir yeşil olsun */
+    border-color: #4caf50;     /* Çerçevesi de yeşil olsun */
+    position: relative;
+}
+
+/* ✔️ TİK İŞARETİNİN KENDİSİ (Kutunun içine beyaz bir onay işareti çiziyoruz) */
+.ders-tik:checked::before {
+    content: '✓';              /* Kutunun içine gelecek sembol */
+    font-size: 16px;           /* Tik işaretinin büyüklüğü */
+    color: white;              /* Tik işaretinin rengi */
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* İşareti kutunun tam merkezine oturtma kombosu */
 }
