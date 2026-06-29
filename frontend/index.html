@@ -1,41 +1,162 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>efe berke erdoğan</title>
+    <title>Efe Berke Erdoğan</title>
     <link rel="stylesheet" href="/frontend/css/style.css" />
-    <link 
   </head>
-  <body background="images/manzara.jpg">
+  <body>
+
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#home" class="logo">Ebe.dev</a>
+        <ul class="nav-links">
+          <li><a href="#home">Ana Sayfa</a></li>
+          <li><a href="#youtube">YouTube</a></li>
+          <li><a href="#port-folio">Port-Folio</a></li>
+          <li><a href="#weekly-program">Ders Programı</a></li>
+        </ul>
+      </div>
+    </nav>
+
     <div class="container">
-      <div class="başlık" id="özel-başlık">
-        <p>
-          <span>
-            <h1>Web Siteme Hoşgeldiniz</h1>
-            <p>Bu Sitede Benimle İlgili İstediğiniz Her Şeyi Bulabilirsiniz</p>
-          </span>
-        </p>
-      </div>
+      
+      <header class="hero-section" id="home">
+        <h1>Web Siteme Hoşgeldiniz</h1>
+        <p>Bu Sitede Benimle İlgili İstediğiniz Her Şeyi Bulabilirsiniz</p>
+      </header>
 
-      <div class="YouTube" id="YouTube-kartı">
-        <div class="YouTube" id="YT-Link">
-          <a href="https://www.youtube.com/" target="_blank">
-            <img src="images/Youtube_logo.png" alt=""
-          /></a>
+      <section class="youtube-section" id="youtube">
+        <div class="youtube-card">
+          <div class="yt-logo">
+            <a href="https://www.youtube.com/" target="_blank">
+              <img src="images/Youtube_logo.png" alt="YouTube Logo" />
+            </a>
+          </div>
+          <div class="yt-content">
+            <p>Youtube çekme amacım falan filan taslak</p>
+          </div>
         </div>
-        <div>
-            <p>
-                <span>
-                    youtube çekme amacım falan filan taslak
-                </span>
-            </p>
-        </div>
-      </div>
-      <div class="haftalık-program">
-        <a href="index.sayfa.2.html" target="_blank">haftalık program</a>
+      </section>
 
-      </div>
+      <section class="port-folio-section" id="port-folio">
+
+      </section>
+
+      <section class="program-section" id="weekly-program">
+        <h2 class="section-title">Haftalık Çalışma Programım</h2>
+        <div class="table-responsive">
+          <table border="1" cellpadding="1" cellspacing="0">
+            <colgroup>
+              <col class="saat-sutunu" />
+              <col class="pazartesi-sutunu" />
+              <col class="sali-sutunu" />
+              <col class="carsamba-sutunu" />
+              <col class="persembe-sutunu" />
+              <col class="cuma-sutunu" />
+              <col class="cumartesi-sutunu" />
+              <col class="pazar-sutunu" />
+            </colgroup>
+
+            <thead>
+              <tr>
+                <th>Saat Aralığı</th>
+                <th colspan="7" style="text-align: center">Günler</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Saat=8.00<br />(uyanış)</td>
+                <td><b>Pazartesi</b><br />(Temel Bilimler)</td>
+                <td><b>Salı</b></td>
+                <td><b>Çarşamba</b></td>
+                <td><b>Perşembe</b></td>
+                <td><b>Cuma</b></td>
+                <td><b>Cumartesi</b></td>
+                <td><b>Pazar</b></td>
+              </tr>
+
+              <tr>
+                <td>10:15 - 11:00<br />(45 dakika zorunlu)</td>
+                <td>Paragraf(20)<br/>Problem(20)<br/>Geometri(20)</td>
+                <td>Paragraf(20)<br/>Problem(20)<br/>Geometri(20)</td>
+                <td>Paragraf(20)<br/>Problem(20)<br/>Geometri(20)</td>
+                <td>Paragraf(20)<br/>Problem(20)<br/>Geometri(20)</td>
+                <td>Paragraf(20)<br/>Problem(20)<br/>Geometri(20)</td>
+                <td>Paragraf(20)<br/>Problem(20)<br/>Geometri(20)</td>
+                <td><b>Mola</b><br /><input type="checkbox" class="ders-tik" id="pazar-mola" /></td>
+              </tr>
+
+              <tr>
+                <td>11:15 - 12:00<br/>(45 dakika zorunlu)</td>
+                <td><b>Matematik</b><br />(Yazılımın Temeli'dir)<br /><input type="checkbox" class="ders-tik" id="pzt2-matematik" /></td>
+                <td><b>Fizik</b><br />(Simulasyonlar İçin Önemli)<br /><input type="checkbox" class="ders-tik" id="fzk2" /></td>
+                <td><b>Kimya</b><br/></td>
+                <td><b>Matematik</b><br/></td>
+                <td><b>Fizik</b><br/></td>
+                <td><b>Geometri</b><br/></td>
+                <td><b>Fullstack Dev</b><br/></td>
+              </tr>
+
+              <tr>
+                <td>12:15 - 13:00<br/>(45 dakika zorunlu)</td>
+                <td><b>Matematik</b><br />(Yazılımın Temeli'dir)<br /><input type="checkbox" class="ders-tik" id="pzt-matematik" /></td>
+                <td><b>Fizik</b><br />(Arayüz Temelleri)<br /><input type="checkbox" class="ders-tik" id="salı-fzk" /></td>
+                <td><b>Kimya</b><br />(Temel Algoritma)<br /><input type="checkbox" class="ders-tik" id="çarşamba-kmy" /></td>
+                <td><b>Matematik</b><br />(Doğa Bilimleri)<br /><input type="checkbox" class="ders-tik" id="perşembe-mat" /></td>
+                <td><b>Fizik</b><br />(JavaScript Giriş)<br /><input type="checkbox" class="ders-tik" id="cuma-fzk" /></td>
+                <td><b>Geometri</b></td>
+                <td><b>JavaScript Giriş</b></td>
+              </tr>
+
+              <tr>
+                <td>13:00 - 17:00</td>
+                <td colspan="7" style="text-align: center"><b>Serbest Vakit</b><br /><input type="checkbox" class="ders-tik" id="serbest" /></td>
+              </tr>
+
+              <tr>
+                <td>17:00 - 18:00<br/>(60 dakika zorunlu)</td>
+                <td><b>Python</b><br /><br /><input type="checkbox" class="ders-tik" id="pzt-py" /></td>
+                <td><b>Python</b><br /><br /><input type="checkbox" class="ders-tik" id="salı-py" /></td>
+                <td><b>Yabancı Dil</b><br /><br /><input type="checkbox" class="ders-tik" id="çarşamba-dil" /></td>
+                <td><b>Python</b><br /><br /><input type="checkbox" class="ders-tik" id="perşembe-py" /></td>
+                <td><b>Fullstack Pratik</b><br /><br /><input type="checkbox" class="ders-tik" id="cuma-fs" /></td>
+                <td><b>Yabancı Dil</b><br /><br /><input type="checkbox" class="ders-tik" id="cumartesi-dil" /></td>
+                <td><b>Mola</b><input type="checkbox" class="ders-tik" id="serbest2" /></td>
+              </tr>
+
+              <tr>
+                <td>18:30 - 20:30<br/>(45 dakika zorunlu)</td>
+                <td colspan="7" style="text-align: center"><b>SPOR ve YEMEK MOLA<br /><input type="checkbox" class="ders-tik" id="spor" /></b></td>
+              </tr>
+
+              <tr>
+                <td>20:30 - 21:30<br/>(45 dakika zorunlu)</td>
+                <td><b>Biyoloji</b><br /><input type="checkbox" class="ders-tik" id="pzt-bio" /></td>
+                <td><b>Kimya</b><br /><br /><input type="checkbox" class="ders-tik" id="salı-kmy2" /></td>
+                <td><b>Çince</b><br />(Çince müzik, dizi veya videolar izle.)<br /><input type="checkbox" class="ders-tik" id="çarşamba-çince" /></td>
+                <td><b>Biyoloji</b><br />(.)<br /><input type="checkbox" class="ders-tik" id="perşembe-bio" /></td>
+                <td><b>Kimya</b><br /><br /><input type="checkbox" class="ders-tik" id="cuma-kmy2" /></td>
+                <td><b>Haftalık Özet</b><br /><br /><input type="checkbox" class="ders-tik" id="cumartesi-özet" /></td>
+                <td><b>Mola</b><br /><input type="checkbox" class="ders-tik" id="pazar-mola2" /></td>
+              </tr>
+
+              <tr>
+                <td>Uyumadan önce<br/>(30 dakika zorunlu)</td>
+                <td><b>Okuma</b><br /><input type="checkbox" class="ders-tik" id="pzt-oku" /></td>
+                <td><b>Okuma</b><br /><input type="checkbox" class="ders-tik" id="salı-oku" /></td>
+                <td><b>Okuma</b><br /><input type="checkbox" class="ders-tik" id="çarşamba-oku" /></td>
+                <td><b>Okuma</b><br /><input type="checkbox" class="ders-tik" id="perşembe-oku" /></td>
+                <td><b>Okuma</b><br /><input type="checkbox" class="ders-tik" id="cuma-oku" /></td>
+                <td><b>Okuma</b><br /><input type="checkbox" class="ders-tik" id="cumartesi-oku" /></td>
+                <td><b>Kitabın Haftalık Özeti</b><br /><input type="checkbox" class="ders-tik" id="pazar-oku" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </div>
 
     <script src="/frontend/js/script.js"></script>
