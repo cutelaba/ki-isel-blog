@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
