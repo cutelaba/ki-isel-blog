@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-content > section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.hero-section {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .left-container h1,
+  .left-container p,
+  .social-icon-links,
+  .left-container-image img {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .logo-container a,
+  .social-icon-links a {
+    transition: none;
+  }
+}
+
+/* Başlangıç durumu (animasyon 0%'da neresi olacak) */
+@keyframes spinFade {
+    0% {
+        opacity: 0;
+        transform: rotate(-540deg) scale(0.1) translateY(80px);
+    }
+    20% {
+        opacity: 0.2;
+        transform: rotate(-180deg) scale(0.3) translateY(40px);
+    }
+    40% {
+        opacity: 0.4;
+        transform: rotate(-90deg) scale(0.5) translateY(20px);
+    }
+    60% {
+        opacity: 0.6;
+        transform: rotate(-45deg) scale(0.7) translateY(10px);
+    }
+    80% {
+        opacity: 0.8;
+        transform: rotate(-15deg) scale(0.8) translateY(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1) translateY(0);
+    }
+}
+
+
+
+.left-container h1 {
+  animation: spinFade 1.2s ease-out both;
+  animation-delay: 0s;
+}
+
+.left-container p {
+  animation: spinFade 1.2s ease-out both;
+  animation-delay: 0.15s;
+}
+
+.social-icon-links {
+  animation: spinFade 1.2s ease-out both;
+  animation-delay: 0.3s;
+}
+
+.left-container-image img {
+  animation: spinFade 1.2s ease-out both;
+  animation-delay: 0.1s;
+}
+
+.social-icon-links a:nth-child(1) { animation-delay: 0.35s; }
+.social-icon-links a:nth-child(2) { animation-delay: 0.4s; }
+.social-icon-links a:nth-child(3) { animation-delay: 0.45s; }
+.social-icon-links a:nth-child(4) { animation-delay: 0.5s; }
+.social-icon-links a:nth-child(5) { animation-delay: 0.55s; }
+
+.social-icon-links a {
+  display: inline-block;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icon-links a:hover {
+  transform: translateY(-3px) scale(1.08);
+}
